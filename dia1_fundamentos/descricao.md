@@ -19,6 +19,7 @@ estruturas mais complexas.`
 **Definidos pelo Usuario (Classes, Structs, Interfaces e Enums)**
 `Criados pelo desenvolvedor para modelar entidades complexas do domínio da aplicação,
 utilizando os tipos primitivos e Derivados como base.`
+
 ---
 
 ### Condicionais(if, switch case)
