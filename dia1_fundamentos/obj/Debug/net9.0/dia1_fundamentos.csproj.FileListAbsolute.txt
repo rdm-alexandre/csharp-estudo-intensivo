@@ -1,0 +1,15 @@
+/home/ruan/Documentos/Docker/c#-estudo-intensivo/src/dia1_fundamentos/bin/Debug/net9.0/dia1_fundamentos
+/home/ruan/Documentos/Docker/c#-estudo-intensivo/src/dia1_fundamentos/bin/Debug/net9.0/dia1_fundamentos.deps.json
+/home/ruan/Documentos/Docker/c#-estudo-intensivo/src/dia1_fundamentos/bin/Debug/net9.0/dia1_fundamentos.runtimeconfig.json
+/home/ruan/Documentos/Docker/c#-estudo-intensivo/src/dia1_fundamentos/bin/Debug/net9.0/dia1_fundamentos.dll
+/home/ruan/Documentos/Docker/c#-estudo-intensivo/src/dia1_fundamentos/bin/Debug/net9.0/dia1_fundamentos.pdb
+/home/ruan/Documentos/Docker/c#-estudo-intensivo/src/dia1_fundamentos/obj/Debug/net9.0/dia1_fundamentos.GeneratedMSBuildEditorConfig.editorconfig
+/home/ruan/Documentos/Docker/c#-estudo-intensivo/src/dia1_fundamentos/obj/Debug/net9.0/dia1_fundamentos.AssemblyInfoInputs.cache
+/home/ruan/Documentos/Docker/c#-estudo-intensivo/src/dia1_fundamentos/obj/Debug/net9.0/dia1_fundamentos.AssemblyInfo.cs
+/home/ruan/Documentos/Docker/c#-estudo-intensivo/src/dia1_fundamentos/obj/Debug/net9.0/dia1_fundamentos.csproj.CoreCompileInputs.cache
+/home/ruan/Documentos/Docker/c#-estudo-intensivo/src/dia1_fundamentos/obj/Debug/net9.0/dia1_fundamentos.dll
+/home/ruan/Documentos/Docker/c#-estudo-intensivo/src/dia1_fundamentos/obj/Debug/net9.0/refint/dia1_fundamentos.dll
+/home/ruan/Documentos/Docker/c#-estudo-intensivo/src/dia1_fundamentos/obj/Debug/net9.0/dia1_fundamentos.pdb
+/home/ruan/Documentos/Docker/c#-estudo-intensivo/src/dia1_fundamentos/obj/Debug/net9.0/dia1_fundamentos.genruntimeconfig.cache
+/home/ruan/Documentos/Docker/c#-estudo-intensivo/src/dia1_fundamentos/obj/Debug/net9.0/ref/dia1_fundamentos.dll
+/home/ruan/Documentos/Docker/c#-estudo-intensivo/src/dia1_fundamentos/obj/Debug/net9.0/dia1_fundamentos.sourcelink.json
