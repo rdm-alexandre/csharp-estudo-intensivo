@@ -1,0 +1,15 @@
+/home/ruan/Documentos/Docker/c#-estudo-intensivo/src/dia2_c#Intermediario/obj/Debug/net8.0/dia2_c#Intermediario.GeneratedMSBuildEditorConfig.editorconfig
+/home/ruan/Documentos/Docker/c#-estudo-intensivo/src/dia2_c#Intermediario/obj/Debug/net8.0/dia2_c#Intermediario.AssemblyInfoInputs.cache
+/home/ruan/Documentos/Docker/c#-estudo-intensivo/src/dia2_c#Intermediario/obj/Debug/net8.0/dia2_c#Intermediario.AssemblyInfo.cs
+/home/ruan/Documentos/Docker/c#-estudo-intensivo/src/dia2_c#Intermediario/obj/Debug/net8.0/dia2_c#Intermediario.csproj.CoreCompileInputs.cache
+/home/ruan/Documentos/Docker/c#-estudo-intensivo/src/dia2_c#Intermediario/obj/Debug/net8.0/dia2_c#Intermediario.sourcelink.json
+/home/ruan/Documentos/Docker/c#-estudo-intensivo/src/dia2_c#Intermediario/bin/Debug/net8.0/dia2_c#Intermediario
+/home/ruan/Documentos/Docker/c#-estudo-intensivo/src/dia2_c#Intermediario/bin/Debug/net8.0/dia2_c#Intermediario.deps.json
+/home/ruan/Documentos/Docker/c#-estudo-intensivo/src/dia2_c#Intermediario/bin/Debug/net8.0/dia2_c#Intermediario.runtimeconfig.json
+/home/ruan/Documentos/Docker/c#-estudo-intensivo/src/dia2_c#Intermediario/bin/Debug/net8.0/dia2_c#Intermediario.dll
+/home/ruan/Documentos/Docker/c#-estudo-intensivo/src/dia2_c#Intermediario/bin/Debug/net8.0/dia2_c#Intermediario.pdb
+/home/ruan/Documentos/Docker/c#-estudo-intensivo/src/dia2_c#Intermediario/obj/Debug/net8.0/dia2_c#Intermediario.dll
+/home/ruan/Documentos/Docker/c#-estudo-intensivo/src/dia2_c#Intermediario/obj/Debug/net8.0/refint/dia2_c#Intermediario.dll
+/home/ruan/Documentos/Docker/c#-estudo-intensivo/src/dia2_c#Intermediario/obj/Debug/net8.0/dia2_c#Intermediario.pdb
+/home/ruan/Documentos/Docker/c#-estudo-intensivo/src/dia2_c#Intermediario/obj/Debug/net8.0/dia2_c#Intermediario.genruntimeconfig.cache
+/home/ruan/Documentos/Docker/c#-estudo-intensivo/src/dia2_c#Intermediario/obj/Debug/net8.0/ref/dia2_c#Intermediario.dll

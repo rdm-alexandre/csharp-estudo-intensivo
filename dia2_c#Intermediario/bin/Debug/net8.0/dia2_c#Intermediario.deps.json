@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "dia2_c#Intermediario/1.0.0": {
+        "runtime": {
+          "dia2_c#Intermediario.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "dia2_c#Intermediario/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

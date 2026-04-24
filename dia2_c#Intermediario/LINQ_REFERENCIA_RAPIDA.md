@@ -1,27 +1,16 @@
-# Dia 2 - C# Intermediário
-Horario de inicio: 10:47
-Horario termino: 14:47
-- Listas 'List<T>'
-- LINQ
-- Nullable
-- Tratamento de erros (try/catch)
-- Async/Await
----
-- [ ] Prática - Filtrar lista de produtos com LINQ
----
-## Listas
-> List é uma coleção de objetos que mantém a ordem em que eles foram adicionados
-## LINQ
+# 🎓 Guia Rápido de LINQ - Referência
+
+> Um guia de bolso para você consultar rapidamente quando estiver programando
 
 ---
 
-### 📌 O que é LINQ?
+## 📌 O que é LINQ?
 
 **LINQ** = **L**anguage **IN**tegrated **Q**uery
 
 É uma forma poderosa e elegante de consultear, filtrar, transformar e agregar dados em C#, usando uma sintaxe similar à de bancos de dados.
 
-#### Vantagens:
+### Vantagens:
 - ✅ Sintaxe clara e legível
 - ✅ Type-safe (verificação de tipos em tempo de compilação)
 - ✅ Funciona com qualquer coleção (List, Array, Dictionary, etc)
@@ -29,9 +18,9 @@ Horario termino: 14:47
 
 ---
 
-#### 🔧 Métodos de LINQ - Referência Rápida
+## 🔧 Métodos de LINQ - Referência Rápida
 
-#### 1️⃣ **WHERE** - Filtrar
+### 1️⃣ **WHERE** - Filtrar
 ```csharp
 // Sintaxe básica
 usuarios.Where(u => u.Cargo == "Desenvolvedor")
@@ -45,7 +34,7 @@ usuarios.Where(u => u.Cargo != "Estagiario")
 
 ---
 
-#### 2️⃣ **SELECT** - Transformar/Projetar
+### 2️⃣ **SELECT** - Transformar/Projetar
 ```csharp
 // Selecionar apenas uma propriedade
 usuarios.Select(u => u.Nome)
@@ -62,7 +51,7 @@ usuarios.Select((u, indice) => new { Posicao = indice + 1, u.Nome })
 
 ---
 
-#### 3️⃣ **ORDERBY / ORDERBYDESCENDING** - Ordenar
+### 3️⃣ **ORDERBY / ORDERBYDESCENDING** - Ordenar
 ```csharp
 // Ordem crescente
 usuarios.OrderBy(u => u.Idade)
@@ -76,7 +65,7 @@ usuarios.OrderBy(u => u.Cargo).ThenByDescending(u => u.Idade)
 
 ---
 
-#### 4️⃣ **FIRST / LAST** - Obter Elemento
+### 4️⃣ **FIRST / LAST** - Obter Elemento
 ```csharp
 // Primeiro (lança exceção se não encontrar)
 usuarios.First()
@@ -99,7 +88,7 @@ usuarios.SingleOrDefault(u => u.CPF == "123")
 
 ---
 
-#### 5️⃣ **COUNT / LENGTH** - Contar
+### 5️⃣ **COUNT / LENGTH** - Contar
 ```csharp
 // Total de elementos
 usuarios.Count()  // int
@@ -113,7 +102,7 @@ usuarios.Count() == 0  // ou  !usuarios.Any()
 
 ---
 
-#### 6️⃣ **AGGREGATE METHODS** - Agregações
+### 6️⃣ **AGGREGATE METHODS** - Agregações
 ```csharp
 // Média
 usuarios.Average(u => u.Idade)  // double
@@ -133,7 +122,7 @@ usuarios.Where(u => u.Cargo == "Dev").Average(u => u.Idade)
 
 ---
 
-#### 7️⃣ **DISTINCT** - Valores Únicos
+### 7️⃣ **DISTINCT** - Valores Únicos
 ```csharp
 // Remover duplicatas
 usuarios.Select(u => u.Cargo).Distinct()  // ["Dev", "Designer", "Gerente"]
@@ -144,7 +133,7 @@ usuarios.Select(u => u.Cidade).Distinct().Count()
 
 ---
 
-#### 8️⃣ **GROUPBY** - Agrupar
+### 8️⃣ **GROUPBY** - Agrupar
 ```csharp
 // Agrupar por cargo
 var grupos = usuarios.GroupBy(u => u.Cargo);
@@ -161,7 +150,7 @@ usuarios
 
 ---
 
-#### 9️⃣ **SKIP / TAKE** - Paginação
+### 9️⃣ **SKIP / TAKE** - Paginação
 ```csharp
 // Pular 5 e pegar o resto
 usuarios.Skip(5)
@@ -177,7 +166,7 @@ usuarios.Skip(pagina * itensPorPagina).Take(itensPorPagina)
 
 ---
 
-#### 🔟 **ANY / ALL** - Verificações Booleanas
+### 🔟 **ANY / ALL** - Verificações Booleanas
 ```csharp
 // Existe algum desenvolvedor?
 usuarios.Any(u => u.Cargo == "Desenvolvedor")  // bool
@@ -194,7 +183,7 @@ usuarios.All(u => u.Cidade == "São Paulo")  // bool
 
 ---
 
-#### 1️⃣1️⃣ **CONTAINS / IN** - Verificar Pertencimento
+### 1️⃣1️⃣ **CONTAINS / IN** - Verificar Pertencimento
 ```csharp
 // Verificar se está em lista
 var cargos = new[] { "Dev", "Designer" };
@@ -206,7 +195,7 @@ usuarios.Where(u => u.Cargo == "Dev" || u.Cargo == "Designer")
 
 ---
 
-#### 1️⃣2️⃣ **TOLIST / TOARRAY** - Converter
+### 1️⃣2️⃣ **TOLIST / TOARRAY** - Converter
 ```csharp
 // Converter para List<T>
 var lista = usuarios.Where(u => u.Idade > 20).ToList()
@@ -220,9 +209,9 @@ var dict = usuarios.ToDictionary(u => u.CPF, u => u.Nome)
 
 ---
 
-#### 🎯 Padrões Comuns
+## 🎯 Padrões Comuns
 
-#### Padrão 1: Filtrar → Ordenar → Transformar
+### Padrão 1: Filtrar → Ordenar → Transformar
 ```csharp
 usuarios
     .Where(u => u.Cargo == "Dev")
@@ -231,7 +220,7 @@ usuarios
     .ToList()
 ```
 
-#### Padrão 2: Agrupar com Estatísticas
+### Padrão 2: Agrupar com Estatísticas
 ```csharp
 usuarios
     .GroupBy(u => u.Cargo)
@@ -245,7 +234,7 @@ usuarios
     .ToList()
 ```
 
-#### Padrão 3: Paginação
+### Padrão 3: Paginação
 ```csharp
 int pagina = 0;
 int tamanho = 10;
@@ -256,7 +245,7 @@ usuarios
     .ToList()
 ```
 
-#### Padrão 4: Ranking com Posição
+### Padrão 4: Ranking com Posição
 ```csharp
 usuarios
     .OrderByDescending(u => u.Idade)
@@ -264,7 +253,7 @@ usuarios
     .ToList()
 ```
 
-#### Padrão 5: Encontrar Max/Min com Contexto
+### Padrão 5: Encontrar Max/Min com Contexto
 ```csharp
 // Usuário mais velho
 var maisVelho = usuarios.OrderByDescending(u => u.Idade).First();
@@ -275,11 +264,11 @@ var maisJovem = usuarios.OrderBy(u => u.Idade).First();
 
 ---
 
-#### 🔄 Sintaxe Query vs Method Chaining
+## 🔄 Sintaxe Query vs Method Chaining
 
 LINQ pode ser escrito de duas formas:
 
-##### Method Chaining (recomendado para a maioria)
+### Method Chaining (recomendado para a maioria)
 ```csharp
 usuarios
     .Where(u => u.Idade > 20)
@@ -288,7 +277,7 @@ usuarios
     .ToList()
 ```
 
-##### Query Syntax (SQL-like)
+### Query Syntax (SQL-like)
 ```csharp
 from u in usuarios
 where u.Idade > 20
@@ -298,7 +287,7 @@ select u.Nome
 
 ---
 
-#### 📋 Checklist de Tipos de Retorno
+## 📋 Checklist de Tipos de Retorno
 
 | Método | Retorna | Precisa `.ToList()`? |
 |--------|---------|----------------------|
@@ -312,9 +301,9 @@ select u.Nome
 
 ---
 
-#### ⚠️ Armadilhas Comuns
+## ⚠️ Armadilhas Comuns
 
-#### ❌ Armadilha 1: Esquecer .ToList()
+### ❌ Armadilha 1: Esquecer .ToList()
 ```csharp
 // Errado - não vai iterar
 var resultado = usuarios.Where(u => u.Idade > 20);
@@ -325,7 +314,7 @@ var resultado = usuarios.Where(u => u.Idade > 20).ToList();
 foreach (var u in resultado) { }  // Já tem os dados
 ```
 
-#### ❌ Armadilha 2: Usar First() sem verificar
+### ❌ Armadilha 2: Usar First() sem verificar
 ```csharp
 // Pode lançar exceção se não encontrar
 var usuario = usuarios.First(u => u.CPF == "999");
@@ -335,7 +324,7 @@ var usuario = usuarios.FirstOrDefault(u => u.CPF == "999");
 if (usuario != null) { ... }
 ```
 
-#### ❌ Armadilha 3: Ordenação em memoria vs banco de dados
+### ❌ Armadilha 3: Ordenação em memoria vs banco de dados
 ```csharp
 // Se fosse Entity Framework, isso seria caro
 usuarios
@@ -350,7 +339,7 @@ usuarios
 
 ---
 
-#### 🚀 Performance Tips
+## 🚀 Performance Tips
 
 1. **Filtrar antes de transformar**
    ```csharp
@@ -376,7 +365,7 @@ usuarios
 
 ---
 
-#### 🎓 Exemplo Completo (Tudo Junto)
+## 🎓 Exemplo Completo (Tudo Junto)
 
 ```csharp
 // Obter TOP 5 desenvolvedores mais jovens, ordenados por nome
@@ -398,32 +387,12 @@ foreach (var dev in top5)
 
 ---
 
-### Nullable
-> **Nullable** Significa que uma variável pode ter valor ou ser nula
-#### Problema que o nullable resolve
-`Se tentarmos processar, ou exibir o valor declarado acima vamoss receber um erro, pois a variável es´ta vazia`
-```csharp
-int idade = null;
-```
-`Agora com o null pointer operator adicionado, nenhuma mensagem será apresentada.`
-```csharp
-int? idade = null;
-```
-#### Operador de coalescencia nula (??)
-> Podemos criar uma variavel ou objeto sem valor e fazer a validação quand utilizarmos
-`Aqui verificamos na hora de exibir o nome se existe algum dado ou não`
-```csharp
-string nome = null;
-Console.WriteLine(nome ?? "Usuário foi burro e não colocou nome");
-// No codigo acima o operador utiliza a seguinte regra: Se nome != null {return nome} else {return outra coisa}
-```
-#### Nullable em validações
-> Não é a opção mais recomendada, pois ela mitiga erros na aplicação.
-```csharp
-if(usuario?.nome == null)
-{
-    return BadRequest("Usuário foi burro e não colocu nome");
-}
-```
-### Tratamento de erros (try/catch)
-### Async/Await
+## 📖 Referências
+
+- [Microsoft Docs - LINQ](https://docs.microsoft.com/en-us/dotnet/csharp/linq/)
+- [LINQ Method Reference](https://www.linqpad.net/)
+- [101 LINQ Samples](https://docs.microsoft.com/en-us/samples/dotnet/samples/101-linq-samples-csharp/)
+
+---
+
+**Made with ❤️ for C# Learners**

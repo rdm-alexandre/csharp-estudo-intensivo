@@ -3,7 +3,7 @@ using System.Globalization;
 
 namespace dia1_fundamentos
 {
-    internal class Program
+    class Program
     {
         static void Main(string[] args)
         {
