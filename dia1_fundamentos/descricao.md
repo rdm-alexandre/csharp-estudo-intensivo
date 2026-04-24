@@ -1,9 +1,9 @@
 # Dia 1 - Fundamentos de C#
 
 - Tipos (int, string, bool, var...)
-- Condicionais(if, switch)
-- Estruturas de repetição
-- Métodos, Classes e objetos
+- Condicionais(if, switch);
+- Estruturas de repetição;
+- Métodos, Classes e objetos;
 ---
 - [ ] Prática - Criar um console simples de cadastro de produtos
 ---
