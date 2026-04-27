@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("dia2_c#Intermediario")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1929674269dc8c3fca0cf3166a8a5b7ef4975676")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+827bf0f5d33d1c297dc32dd9546694c3559853d7")]
 [assembly: System.Reflection.AssemblyProductAttribute("dia2_c#Intermediario")]
 [assembly: System.Reflection.AssemblyTitleAttribute("dia2_c#Intermediario")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

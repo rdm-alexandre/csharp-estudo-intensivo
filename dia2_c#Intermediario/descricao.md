@@ -15,23 +15,23 @@ Horario termino: 14:47
 
 ---
 
-### 📌 O que é LINQ?
+### O que é LINQ?
 
 **LINQ** = **L**anguage **IN**tegrated **Q**uery
 
 É uma forma poderosa e elegante de consultear, filtrar, transformar e agregar dados em C#, usando uma sintaxe similar à de bancos de dados.
 
 #### Vantagens:
-- ✅ Sintaxe clara e legível
-- ✅ Type-safe (verificação de tipos em tempo de compilação)
-- ✅ Funciona com qualquer coleção (List, Array, Dictionary, etc)
-- ✅ Integrado à linguagem (não precisa de bibliotecas externas)
+-  Sintaxe clara e legível
+-  Type-safe (verificação de tipos em tempo de compilação)
+-  Funciona com qualquer coleção (List, Array, Dictionary, etc)
+-  Integrado à linguagem (não precisa de bibliotecas externas)
 
 ---
 
-#### 🔧 Métodos de LINQ - Referência Rápida
+#### **Métodos de LINQ - Referência Rápida**
 
-#### 1️⃣ **WHERE** - Filtrar
+#### **WHERE** - Filtrar
 ```csharp
 // Sintaxe básica
 usuarios.Where(u => u.Cargo == "Desenvolvedor")
@@ -45,7 +45,7 @@ usuarios.Where(u => u.Cargo != "Estagiario")
 
 ---
 
-#### 2️⃣ **SELECT** - Transformar/Projetar
+#### **SELECT** - Transformar/Projetar
 ```csharp
 // Selecionar apenas uma propriedade
 usuarios.Select(u => u.Nome)
@@ -62,7 +62,7 @@ usuarios.Select((u, indice) => new { Posicao = indice + 1, u.Nome })
 
 ---
 
-#### 3️⃣ **ORDERBY / ORDERBYDESCENDING** - Ordenar
+#### **ORDERBY / ORDERBYDESCENDING** - Ordenar
 ```csharp
 // Ordem crescente
 usuarios.OrderBy(u => u.Idade)
@@ -76,7 +76,7 @@ usuarios.OrderBy(u => u.Cargo).ThenByDescending(u => u.Idade)
 
 ---
 
-#### 4️⃣ **FIRST / LAST** - Obter Elemento
+#### **FIRST / LAST** - Obter Elemento
 ```csharp
 // Primeiro (lança exceção se não encontrar)
 usuarios.First()
@@ -99,7 +99,7 @@ usuarios.SingleOrDefault(u => u.CPF == "123")
 
 ---
 
-#### 5️⃣ **COUNT / LENGTH** - Contar
+#### **COUNT / LENGTH** - Contar
 ```csharp
 // Total de elementos
 usuarios.Count()  // int
@@ -113,7 +113,7 @@ usuarios.Count() == 0  // ou  !usuarios.Any()
 
 ---
 
-#### 6️⃣ **AGGREGATE METHODS** - Agregações
+#### **AGGREGATE METHODS** - Agregações
 ```csharp
 // Média
 usuarios.Average(u => u.Idade)  // double
@@ -133,7 +133,7 @@ usuarios.Where(u => u.Cargo == "Dev").Average(u => u.Idade)
 
 ---
 
-#### 7️⃣ **DISTINCT** - Valores Únicos
+#### **DISTINCT** - Valores Únicos
 ```csharp
 // Remover duplicatas
 usuarios.Select(u => u.Cargo).Distinct()  // ["Dev", "Designer", "Gerente"]
@@ -144,7 +144,7 @@ usuarios.Select(u => u.Cidade).Distinct().Count()
 
 ---
 
-#### 8️⃣ **GROUPBY** - Agrupar
+#### **GROUPBY** - Agrupar
 ```csharp
 // Agrupar por cargo
 var grupos = usuarios.GroupBy(u => u.Cargo);
@@ -161,7 +161,7 @@ usuarios
 
 ---
 
-#### 9️⃣ **SKIP / TAKE** - Paginação
+#### **SKIP / TAKE** - Paginação
 ```csharp
 // Pular 5 e pegar o resto
 usuarios.Skip(5)
@@ -177,7 +177,7 @@ usuarios.Skip(pagina * itensPorPagina).Take(itensPorPagina)
 
 ---
 
-#### 🔟 **ANY / ALL** - Verificações Booleanas
+#### **ANY / ALL** - Verificações Booleanas
 ```csharp
 // Existe algum desenvolvedor?
 usuarios.Any(u => u.Cargo == "Desenvolvedor")  // bool
@@ -194,7 +194,7 @@ usuarios.All(u => u.Cidade == "São Paulo")  // bool
 
 ---
 
-#### 1️⃣1️⃣ **CONTAINS / IN** - Verificar Pertencimento
+#### **CONTAINS / IN** - Verificar Pertencimento
 ```csharp
 // Verificar se está em lista
 var cargos = new[] { "Dev", "Designer" };
@@ -206,7 +206,7 @@ usuarios.Where(u => u.Cargo == "Dev" || u.Cargo == "Designer")
 
 ---
 
-#### 1️⃣2️⃣ **TOLIST / TOARRAY** - Converter
+#### **TOLIST / TOARRAY** - Converter
 ```csharp
 // Converter para List<T>
 var lista = usuarios.Where(u => u.Idade > 20).ToList()
@@ -275,7 +275,7 @@ var maisJovem = usuarios.OrderBy(u => u.Idade).First();
 
 ---
 
-#### 🔄 Sintaxe Query vs Method Chaining
+#### Sintaxe Query vs Method Chaining
 
 LINQ pode ser escrito de duas formas:
 
@@ -312,9 +312,9 @@ select u.Nome
 
 ---
 
-#### ⚠️ Armadilhas Comuns
+#### Armadilhas Comuns
 
-#### ❌ Armadilha 1: Esquecer .ToList()
+#### Esquecer .ToList()
 ```csharp
 // Errado - não vai iterar
 var resultado = usuarios.Where(u => u.Idade > 20);
@@ -325,7 +325,7 @@ var resultado = usuarios.Where(u => u.Idade > 20).ToList();
 foreach (var u in resultado) { }  // Já tem os dados
 ```
 
-#### ❌ Armadilha 2: Usar First() sem verificar
+#### Usar First() sem verificar
 ```csharp
 // Pode lançar exceção se não encontrar
 var usuario = usuarios.First(u => u.CPF == "999");
@@ -335,7 +335,7 @@ var usuario = usuarios.FirstOrDefault(u => u.CPF == "999");
 if (usuario != null) { ... }
 ```
 
-#### ❌ Armadilha 3: Ordenação em memoria vs banco de dados
+#### Ordenação em memoria vs banco de dados
 ```csharp
 // Se fosse Entity Framework, isso seria caro
 usuarios
@@ -350,7 +350,7 @@ usuarios
 
 ---
 
-#### 🚀 Performance Tips
+#### Performance Tips
 
 1. **Filtrar antes de transformar**
    ```csharp
@@ -425,5 +425,141 @@ if(usuario?.nome == null)
     return BadRequest("Usuário foi burro e não colocu nome");
 }
 ```
-### Tratamento de erros (try/catch)
+### Tratamento de erros (try/catch e finally)
+> É  uma forma de evitar que o sistema quebre quando dá alguma coisa errado
+> O TryCatch resolve o seguinte problema: 
+> Deu erro? - Quebra aplicação
+> Por Deu Erro? - Posso tratar e continuar a execução do codigo ou retornar algo
+
+#### O que é uma Exception?
+> Uma exception é um erro em tempo de execução, veja no exemplo abaixo
+```csharp
+int numero = int.Parse("abc"); // Isso gera uma exceção FormatException (Vamos tratar disso no proximo Ex.)
+```
+
+`Estrutura`
+```csharp
+try
+{
+    // Código que pode dar erro (todos kk)
+}
+catch (Exception ex)
+{
+    // Tratamento do erro
+}
+```
+
+`Exemplo`
+```csharp
+// No primeiro exemplo, forçamos a ocorrência do erro, agora vamos tratar ele.
+try
+{
+    int numero = int.Parse("abc");
+}
+catch (Exception ex)
+{
+    Console.WriteLine("Erro ao converter número. Erro:" + ex.Message);
+}
+```
+`Assim, ao inves de parar sua aplicação por um simples problema, você pode apresentar a mensagem ao usuario sem atrapalhar 
+nenhum outro processo.`
+
+`Trabalhando com multiplos catch`
+```csharp
+try
+{
+    int numero = int.Parse("abc");
+}
+catch (FormatException ex)
+{
+    Console.WriteLine("Erro ao converter número. Erro:" + ex.Message);
+}
+catch (Exception e)
+{
+    Console.WriteLine("Erro Genérico. Detalhes: " + e.Message);
+}
+```
+
+`finally` - Sempre vai executar, independente do que acontecer
+tem uso muito forma em fechamento de conexções e liberação de recursos
+```csharp
+try
+{
+    // Código
+}
+catch
+{
+    // Erro
+}
+finally
+{
+    Concole.WriteLine("Sempre Executa");
+}
+```
+
+#### Erros comuns
+`Engolir o erro`
+```csharp
+try
+{
+    int numero = int.Parse("abc");
+}
+catch{}
+// Note que o erro não foi tratado, isso em uma aplicação grande pode dificultar muito o debug 
+```
+
+`Usar Try Catch como regra de negocio`
+```csharp
+try
+{
+    int numero = int.Parse("abc");
+}
+catch
+{
+    numero = 0;    
+}
+// No contexto acima a regra foi a seguinte, se exsitir algum erro, numero vai ser = 0, mas existe milhares de formas 
+// de executar este código e a apresentada acima é a menos recomendada.
+```
+
 ### Async/Await
+> Antes de iniciarmos no Async e Await, é importante entender o que é programação síncrona e assíncrona
+> Programação Sincrona executa tarefas sequencialmente, bloqueando a próxima opreção até a conclusão,
+> isso facilita a depuração, mas pode afetar a performance final da aplicação.
+> Programação Assíncrona trabalha de forma simultanea, permitindo que a aplicação processe outros eventos 
+> enquanto espera tarefas demoradas (I/O, requisiçõe a APIs, banco de dados).
+
+
+`Estrutura Basica`
+```csharp
+public async Task MetodoAsync()
+{
+    await AlgumaTarefa();
+}
+```
+
+#### O que cada coisa faz?
+**async:** Indica que o método é assíncrono
+
+**await:** Espera a tarefa terminar sem travar a aplicação
+
+**Task:** Representa uma operação assíncrona
+
+`Exemplos`
+```csharp
+// 1 - Simples. O codigo espera, mas sem parar a aplicação
+public async Task Esperar()
+{
+    Console.WriteLine("Inicio");
+    await Task.Delay(2000);
+    Console.WriteLine("Fim");
+}
+
+// 2 - Real. Realizar uma requisição em API externa
+public async Task<string> BuscarDados()
+{
+    var httpClient = new HttpClient();
+    var resposta = await httpClient.GetStringByAsync("https://example.com");
+    return resposta;
+}
+```
