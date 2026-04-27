@@ -11,7 +11,7 @@
 **Dados Primitivos (Int, Decimal, bool, Float...)**
 `São dados com seus tipos definidos pela linguagem, sem possibilidade de alteração`
 
-**Derivados (String, Arraysm Ponteiros, Delegates...)**
+**Derivados (String, Arrays Ponteiros, Delegates...)**
 `São conjuntos contruidos com dados primitivos. Eles não criam o dado do zero,
 mas organizam, agrupam ou estendem os tipos básicos para representar
 estruturas mais complexas.`
