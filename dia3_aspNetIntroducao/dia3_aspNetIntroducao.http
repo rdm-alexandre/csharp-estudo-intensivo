@@ -1,0 +1,6 @@
+@dia3_aspNetIntroducao_HostAddress = http://localhost:5088
+
+GET {{dia3_aspNetIntroducao_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

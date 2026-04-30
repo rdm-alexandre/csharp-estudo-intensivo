@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/dia3_aspNetIntroducao.props" />
+</Project>
