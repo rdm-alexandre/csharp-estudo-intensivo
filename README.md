@@ -1,2 +1,2 @@
 # csharp-estudo-intensivo
-Ta funcionando esse trem nãoop
+Funciona pelo amor de deus
